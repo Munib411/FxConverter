@@ -1,0 +1,53 @@
+<div style="min-height: 100vh; background-color: #f5f5f5;">
+      <!-- Header -->
+      <header style="background-color: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-bottom: 1px solid #e0e0e0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 16px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 0; flex-wrap: wrap; gap: 16px;">
+            <div style="display: flex; align-items: center;">
+              <mat-icon style="font-size: 28px; color: #1976d2; margin-right: 8px;">currency_exchange</mat-icon>
+              <h1 style="font-size: 20px; font-weight: bold; color: #333; margin: 0;">FxConverter</h1>
+            </div>
+            <nav style="display: flex; gap: 16px; flex-wrap: wrap;">
+              <button 
+                mat-button 
+                (click)="activeTab = 'converter'"
+                [style.color]="activeTab === 'converter' ? '#1976d2' : '#666'"
+                style="font-weight: 500; font-size: 14px; min-width: auto; padding: 8px 12px;"
+              >
+                <mat-icon style="margin-right: 4px; font-size: 18px;">swap_horiz</mat-icon>
+                <span class="nav-text">Converter</span>
+              </button>
+              <button 
+                mat-button 
+                (click)="activeTab = 'history'"
+                [style.color]="activeTab === 'history' ? '#1976d2' : '#666'"
+                style="font-weight: 500; font-size: 14px; min-width: auto; padding: 8px 12px;"
+              >
+                <mat-icon style="margin-right: 4px; font-size: 18px;">history</mat-icon>
+                <span class="nav-text">History</span>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main style="padding: 16px 0; min-height: calc(100vh - 200px);">
+        <div *ngIf="activeTab === 'converter'">
+          <app-currency-conversion></app-currency-conversion>
+        </div>
+        <div *ngIf="activeTab === 'history'">
+          <app-conversion-history></app-conversion-history>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer style="background-color: white; border-top: 1px solid #e0e0e0; margin-top: auto;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 24px 16px;">
+          <div style="text-align: center; color: #666;">
+            <p style="margin: 0; font-size: 14px;">&copy; 2025 FxConverter. Built with Angular and .NET Core.</p>
+            <p style="margin: 8px 0 0 0; font-size: 12px;">Real-time currency conversion with historical tracking.</p>
+          </div>
+        </div>
+      </footer>
+</div>

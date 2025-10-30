@@ -1,0 +1,63 @@
+### FxConverter API Tests
+### Base URL
+@baseUrl = https://localhost:7000
+
+### Test Currency Conversion
+POST {{baseUrl}}/api/conversion
+Content-Type: application/json
+
+{
+  "amount": 100,
+  "fromCurrency": "USD",
+  "toCurrency": "EUR"
+}
+
+### Test Currency Conversion - Same Currency
+POST {{baseUrl}}/api/conversion
+Content-Type: application/json
+
+{
+  "amount": 50,
+  "fromCurrency": "USD",
+  "toCurrency": "USD"
+}
+
+### Test Currency Conversion - Large Amount
+POST {{baseUrl}}/api/conversion
+Content-Type: application/json
+
+{
+  "amount": 1000,
+  "fromCurrency": "GBP",
+  "toCurrency": "JPY"
+}
+
+### Get Conversion History
+GET {{baseUrl}}/api/conversion/history?userId=default-user
+
+### Get Available Currencies
+GET {{baseUrl}}/api/currency
+
+### Get Exchange Rates for USD
+GET {{baseUrl}}/api/currency/rates/USD
+
+### Get Exchange Rates for EUR
+GET {{baseUrl}}/api/currency/rates/EUR
+
+### Test Invalid Currency Conversion
+POST {{baseUrl}}/api/conversion
+Content-Type: application/json
+
+{
+  "amount": -10,
+  "fromCurrency": "USD",
+  "toCurrency": "EUR"
+}
+
+### Test Missing Fields
+POST {{baseUrl}}/api/conversion
+Content-Type: application/json
+
+{
+  "amount": 100
+}

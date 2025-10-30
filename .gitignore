@@ -1,0 +1,127 @@
+# ===========================================
+# Global .gitignore for .NET + Angular Project
+# ===========================================
+
+# ---------------------------
+# OS / IDE / Editor Files
+# ---------------------------
+.DS_Store
+Thumbs.db
+*.log
+*.vspscc
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.orig
+.idea/
+.vscode/
+.vs/
+*.swp
+*.bak
+
+# ---------------------------
+# Build / Publish / Output
+# ---------------------------
+bin/
+obj/
+out/
+build/
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+publish/
+dist/
+wwwroot/dist/
+TestResults/
+CoverageResults/
+*.dll
+*.exe
+*.pdb
+
+# ---------------------------
+# ASP.NET Core
+# ---------------------------
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Local.json
+appsettings.*.json
+*.db
+*.mdf
+*.ldf
+Logs/
+wwwroot/lib/
+wwwroot/node_modules/
+
+# ---------------------------
+# Entity Framework
+# ---------------------------
+Migrations/
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# ---------------------------
+# Node / Angular
+# ---------------------------
+node_modules/
+dist/
+tmp/
+temp/
+.angular/
+.angular/cache/
+.angular/cache/*
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.env
+.env.*
+*.tgz
+
+# ---------------------------
+# Compiled Frontend Assets
+# ---------------------------
+/fx-converter-ui/dist/
+/fx-converter-ui/.angular/cache/
+/fx-converter-ui/node_modules/
+/fx-converter-ui/src/environments/environment.ts
+/fx-converter-ui/src/environments/environment.prod.ts
+
+# ---------------------------
+# Logs / Cache
+# ---------------------------
+*.log
+logs/
+log/
+*.cache
+.cache/
+coverage/
+*.nupkg
+*.snupkg
+
+# ---------------------------
+# Test / Reports
+# ---------------------------
+*.trx
+*.coverage
+*.coveragereport.xml
+TestResults/
+coverage/
+
+# ---------------------------
+# Misc
+# ---------------------------
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+/secrets.json
+.idea/
+*.tmp
+*.bak
+*.rej
